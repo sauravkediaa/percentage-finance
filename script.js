@@ -50,3 +50,8 @@ document.getElementById('sellPrice').addEventListener('keydown', handleEnterKeyP
 document.getElementById('investedAmount').addEventListener('keydown', handleEnterKeyPress);
 document.getElementById('calculateBtn').addEventListener('click', calculate);
 document.getElementById('resetBtn').addEventListener('click', resetForm);
+
+// Prevent scrolling on mobile devices
+document.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, { passive: false });
